@@ -101,7 +101,8 @@
           cards.select("title").text(function(d) { return d.value; });
           
           cards.exit().remove();
-
+   
+          /*
           var legend = svg.selectAll(".legend")
               .data([0].concat(colorScale.quantiles()), function(d) { return d; });
 
@@ -122,7 +123,7 @@
             .attr("x", height + gridSize);
 
           legend.exit().remove();
-
+          */
         });  
       };
 
