@@ -65,9 +65,9 @@
         .append("input")
         .attr("value", function(d, i){ 
           if(i == 1){
-             "texting Events"
+            return "texting Events"
           } else {
-            "Other Distractions"
+            return "Other Distractions"
           }})
         .attr("type", "button")
         .attr("class", "dataset-button")
@@ -136,6 +136,6 @@
       heatmapChart(datasets[0]);
      
     </script>
-    <p> Hi </p>
+    <p> returning things helps </p>
   </body>
 </html>
