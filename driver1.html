@@ -63,18 +63,22 @@
 
       datasetpicker.enter()
         .append("input")
-        .attr("value", function(d){ return "Dataset " + d })
+        .attr("value", function(d){ 
+          if(d == "data.tsv"){
+             "texting Events"
+          } else {
+            "Other Distractions"
+          }})
         .attr("type", "button")
         .attr("class", "dataset-button")
         .style("background-color", "#333333")
-        .style("border", "1px soild black")
+        .style("border", "None")
         .style("color", "white")
         .style("padding", "15px 20px")
         .style("text-align", "center")
         .style("text-decoration", "none")
         .style("display", "inline-block")
         .style("font-size", "16px")
-        .style("float: left)
         .on("click", function(d) {
           heatmapChart(d);
         });
@@ -132,6 +136,6 @@
       heatmapChart(datasets[0]);
      
     </script>
-    <p> test </p>
+    <p> Hi again </p>
   </body>
 </html>
