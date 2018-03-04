@@ -90,8 +90,14 @@
         .attr("type", "button")
         .attr("class", "dataset-button")
         .style("background-color", "#4CAF50")
+        .style("border", "none")
+        .style("color", "white")
+        .style("padding", "15px 32px")
+        .style("text-align", "center")
+        .style("text-decoration", "none")
+        .style("display", "inline-block")
+        .style("font-size", "16px")     
         .on("click", function(d) {
-          d3.select(this).style("background-color", "##008CBA")
           heatmapChart(d);
         });
       
