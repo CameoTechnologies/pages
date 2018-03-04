@@ -64,7 +64,7 @@
             .attr("y", function(d, i) { return i * gridSize; })
             .attr("x", 0)
             .style("text-anchor", "end")
-            .attr("transform", "translate(" + gridSize / 1.5 + ")", 0)
+            .attr("transform", "translate(0, " + gridSize / 1.5 + ")")
             .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });
 
       var heatmapChart = function(tsvFile) {
