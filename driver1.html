@@ -92,6 +92,8 @@ Plotly.newPlot('myDiv', data, layout);
       var svg = d3.select("#chart").append("svg")
           .attr("width", "100%)
           .attr("height", "50%")
+          .attr("viewBox", "0, 0, 600, 400")
+          .attr("preserveAspectRatio", "XMidYMid meet")
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
