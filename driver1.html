@@ -66,14 +66,15 @@
         .attr("value", function(d){ return "Dataset " + d })
         .attr("type", "button")
         .attr("class", "dataset-button")
-        .style("background-color", "#0d0d0d")
-        .style("border", "none")
+        .style("background-color", "#333333")
+        .style("border", "1px soild black")
         .style("color", "white")
-        .style("padding", "15px 32px")
+        .style("padding", "15px 20px")
         .style("text-align", "center")
         .style("text-decoration", "none")
         .style("display", "inline-block")
-        .style("font-size", "16px")     
+        .style("font-size", "16px")
+        .style("float: left)
         .on("click", function(d) {
           heatmapChart(d);
         });
