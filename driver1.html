@@ -83,6 +83,7 @@
         .style("display", "inline-block")
         .style("font-size", "16px")
         .on("click", function(d) {
+          D3.select(this).style("background-color", "black")
           heatmapChart(d);
         });
       
