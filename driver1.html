@@ -3,6 +3,7 @@
 <html>
   <head>
     <style>
+      
       .button {
          background-color: #4CAF50; /* Green */
          border: none;
@@ -68,6 +69,18 @@
             .attr("transform", "translate(" + gridSize / 2 + ", -6)")
             .attr("class", function(d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); })
 
+       var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
+        .data(datasets);
+
+      datasetpicker.enter()
+        .append("input")
+        .attr("value", function(d){ return "Dataset " + d })
+        .attr("type", "button")
+        .attr("class", "dataset-button")
+        .on("click", function(d) {
+          heatmapChart(d);
+        });
+      
       var timeLabels = svg.selectAll(".timeLabel")
           .data(times)
           .enter().append("text")
@@ -141,18 +154,7 @@
       };
 
       heatmapChart(datasets[0]);
-      
-      var datasetpicker = d3.select("#dataset-picker").selectAll(".dataset-button")
-        .data(datasets);
-
-      datasetpicker.enter()
-        .append("input")
-        .attr("value", function(d){ return "Dataset " + d })
-        .attr("type", "button")
-        .attr("class", "dataset-button")
-        .on("click", function(d) {
-          heatmapChart(d);
-        });
+     
     </script>
   </body>
 </html>
