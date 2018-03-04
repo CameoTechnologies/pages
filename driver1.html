@@ -27,8 +27,8 @@
   </head>
   <body>
     <center>
-      <font size="1">Distraction report for </font><br>
-      <font size="4">Snidley Wiplash</font>
+      <font size="4">Distraction report for </font><br>
+      <b><font size="6">Snidley Wiplash</font></b><br>
       <div id="dataset-picker"></div>
       <div id="chart"></div>
     </center>
@@ -67,7 +67,7 @@
       datasetpicker.enter()
         .append("input")
         .attr("value", function(d, i){ 
-          if(i == 1){
+          if(i == 0){
             return "Texting Events"
           } else {
             return "Other Distractions"
