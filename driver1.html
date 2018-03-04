@@ -63,8 +63,8 @@
 
       datasetpicker.enter()
         .append("input")
-        .attr("value", function(d){ 
-          if(d == "data.tsv"){
+        .attr("value", function(d, i){ 
+          if(i == 1){
              "texting Events"
           } else {
             "Other Distractions"
@@ -136,6 +136,6 @@
       heatmapChart(datasets[0]);
      
     </script>
-    <p> Hi again </p>
+    <p> Hi </p>
   </body>
 </html>
